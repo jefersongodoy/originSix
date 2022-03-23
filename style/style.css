@@ -1,7 +1,13 @@
+/* =========== RESET  ================*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -12,6 +18,8 @@ img {
   width: 100%;
   height: auto;
 }
+
+/* =========== VARIABLES  ================*/
 
 :root {
   --header-height: 4.5rem;
@@ -28,6 +36,8 @@ img {
   --body-color: hsl(0 0% 98%);
 }
 
+/* =========== BASE  ================*/
+
 body {
   font: 400 1rem "DM Sans", sans-serif;
   color: var(--text-color);
@@ -35,7 +45,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+.title {
   font: 700 1.875rem "Poppins", sans-serif;
   color: var(--title-color);
 }
@@ -92,13 +102,11 @@ h1 {
   background-color: var(--body-color);
 }
 
-nav {
-  width: 100%;
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+main {
+  margin-top: calc(var(--header-height) + 2rem);
 }
+
+/* =========== LOGO  ================*/
 
 .logo {
   font: 700 1.31rem "Poppins", sans-serif;
@@ -109,9 +117,51 @@ nav {
   color: var(--base-color);
 }
 
-main {
-  margin-top: var(--header-height);
+/* =========== NAVIGATION  ================*/
+
+nav {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+nav ul li {
+  text-align: center;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* =========== MOSTRAR MENU  ================*/
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background: var(--body-color);
+
+  height: 10vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.show .menu {
+  display: grid;
+  place-content: center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+
+/* =========== HOME  ================*/
 
 #home {
   overflow: hidden;
