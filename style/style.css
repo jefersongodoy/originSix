@@ -1,5 +1,4 @@
 /* =========== RESET  ================*/
-
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +19,6 @@ img {
 }
 
 /* =========== VARIABLES  ================*/
-
 :root {
   --header-height: 4.5rem;
 
@@ -37,7 +35,6 @@ img {
 }
 
 /* =========== BASE  ================*/
-
 body {
   font: 400 1rem "DM Sans", sans-serif;
   color: var(--text-color);
@@ -48,6 +45,7 @@ body {
 .title {
   font: 700 1.875rem "Poppins", sans-serif;
   color: var(--title-color);
+  -webkit-font-smoothing: auto;
 }
 
 .button {
@@ -57,7 +55,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0 2rem;
-  border-radius: 00.25rem;
+  border-radius: 0.25rem;
   font: 500 1rem "DM Sans", sans-serif;
   transition: background 0.3s;
 }
@@ -75,6 +73,7 @@ body {
   );
 }
 
+/* =========== LAYOUT  ================*/
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -107,7 +106,6 @@ main {
 }
 
 /* =========== LOGO  ================*/
-
 .logo {
   font: 700 1.31rem "Poppins", sans-serif;
   color: var(--title-color);
@@ -118,7 +116,6 @@ main {
 }
 
 /* =========== NAVIGATION  ================*/
-
 nav {
   width: 100%;
   height: var(--header-height);
@@ -131,20 +128,45 @@ nav ul li {
   text-align: center;
 }
 
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--base-color);
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--base-color);
+
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
 nav .menu {
   opacity: 0;
   visibility: hidden;
 }
 
 /* =========== MOSTRAR MENU  ================*/
-
 nav.show .menu {
   opacity: 1;
   visibility: visible;
 
   background: var(--body-color);
 
-  height: 10vh;
+  height: 100vh;
   width: 100vw;
 
   position: fixed;
@@ -162,7 +184,6 @@ nav.show ul.grid {
 }
 
 /* =========== HOME  ================*/
-
 #home {
   overflow: hidden;
 }
