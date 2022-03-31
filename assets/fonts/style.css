@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?11nr1u');
-  src:  url('fonts/icomoon.eot?11nr1u#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?11nr1u') format('truetype'),
-    url('fonts/icomoon.woff?11nr1u') format('woff'),
-    url('fonts/icomoon.svg?11nr1u#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?2dc4rr');
+  src:  url('fonts/icomoon.eot?2dc4rr#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?2dc4rr') format('truetype'),
+    url('fonts/icomoon.woff?2dc4rr') format('woff'),
+    url('fonts/icomoon.svg?2dc4rr#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,23 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mas-chair:before {
+  content: "\e90c";
+}
+.icon-masback:before {
+  content: "\e90d";
+}
 .icon-reflex:before {
   content: "\e911";
-}
-.icon-foot:before {
-  content: "\e90f";
 }
 .icon-chair:before {
   content: "\e910";
 }
-.icon-cream:before {
-  content: "\e90c";
-}
-.icon-litter:before {
-  content: "\e90d";
-}
 .icon-massage:before {
   content: "\e90e";
+}
+.icon-arrow-up:before {
+  content: "\e90f";
 }
 .icon-close:before {
   content: "\e900";
